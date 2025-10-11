@@ -1,0 +1,36 @@
+[
+  {
+    "年(月)別":"112",
+    "季　節　調　整":432419.96,
+    "col_2":-9.8,
+    "col_3":null,
+    "col_4":351631.65,
+    "col_5":-17.9,
+    "col_6":null,
+    "三 個 月 移 動 平 均":null,
+    "col_8":null,
+    "col_9":null,
+    "col_10":null,
+    "col_11":null,
+    "col_12":null,
+    "source_table":"table13",
+    "processing_date":"2025-10-11"
+  },
+  {
+    "年(月)別":"113",
+    "季　節　調　整":474995.671,
+    "col_2":9.8,
+    "col_3":null,
+    "col_4":394365.227,
+    "col_5":12.2,
+    "col_6":null,
+    "三 個 月 移 動 平 均":null,
+    "col_8":null,
+    "col_9":null,
+    "col_10":null,
+    "col_11":null,
+    "col_12":null,
+    "source_table":"table13",
+    "processing_date":"2025-10-11"
+  }
+]

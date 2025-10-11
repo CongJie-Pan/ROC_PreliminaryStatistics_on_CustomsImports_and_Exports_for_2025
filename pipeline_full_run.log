@@ -1,0 +1,492 @@
+INFO:__main__:Starting data processing pipeline...
+INFO:__main__:Timestamp: 2025-10-11T21:20:42.222400
+INFO:__main__:Validate only: False
+INFO:__main__:Export formats: ['parquet', 'csv', 'json']
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE01
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table01...
+INFO:data_processing.excel_loader:Loading table01 from Table1_Import_and_ExportTradeValues.xlsx
+INFO:data_processing.excel_loader:Loaded table01: shape=(28, 7), columns=7
+INFO:__main__:   ✅ Loaded: (28, 7)
+INFO:__main__:🧹 Cleaning table01...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table01
+WARNING:data_processing.data_cleaner:No column mappings found for table01
+INFO:data_processing.data_cleaner:Cleaned table01: final shape=(11, 7)
+INFO:__main__:   ✅ Cleaned: (11, 7)
+INFO:__main__:🔄 Transforming table01...
+INFO:data_processing.data_transformer:Transforming dataframe for table01
+INFO:data_processing.data_transformer:Transformed table01: final shape=(11, 9)
+INFO:__main__:   ✅ Transformed: (11, 9)
+INFO:__main__:✓  Validating table01...
+INFO:data_processing.data_validator:Validating dataframe for table01
+INFO:data_processing.data_validator:Validation for table01: PASSED
+INFO:__main__:   ✅ Validation passed
+WARNING:__main__:      ⚠️  No year/month column found
+INFO:__main__:💾 Exporting table01...
+INFO:data_processing.format_converter:Exported table01 to Parquet: data/processed/parquet/table01.parquet (0.01 MB)
+INFO:data_processing.format_converter:Exported table01 to CSV: data/processed/csv/table01.csv (0.00 MB)
+INFO:data_processing.format_converter:Exported table01 to JSON: data/processed/json/table01.json (0.00 MB)
+INFO:data_processing.format_converter:Exported table01 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table01.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table01.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table01.json
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE02
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table02...
+INFO:data_processing.excel_loader:Loading table02 from Table2_Classification_of_MajorExportCommodities.xlsx
+INFO:data_processing.excel_loader:Loaded table02: shape=(29, 30), columns=30
+INFO:__main__:   ✅ Loaded: (29, 30)
+INFO:__main__:🧹 Cleaning table02...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table02
+INFO:data_processing.data_cleaner:Cleaned table02: final shape=(11, 30)
+INFO:__main__:   ✅ Cleaned: (11, 30)
+INFO:__main__:🔄 Transforming table02...
+INFO:data_processing.data_transformer:Transforming dataframe for table02
+INFO:data_processing.data_transformer:Transformed table02: final shape=(11, 32)
+INFO:__main__:   ✅ Transformed: (11, 32)
+INFO:__main__:✓  Validating table02...
+INFO:data_processing.data_validator:Validating dataframe for table02
+INFO:data_processing.data_validator:Validation for table02: PASSED
+INFO:__main__:   ✅ Validation passed
+INFO:__main__:💾 Exporting table02...
+INFO:data_processing.format_converter:Exported table02 to Parquet: data/processed/parquet/table02.parquet (0.02 MB)
+INFO:data_processing.format_converter:Exported table02 to CSV: data/processed/csv/table02.csv (0.01 MB)
+INFO:data_processing.format_converter:Exported table02 to JSON: data/processed/json/table02.json (0.01 MB)
+INFO:data_processing.format_converter:Exported table02 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table02.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table02.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table02.json
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE03
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table03...
+INFO:data_processing.excel_loader:Loading table03 from Table3_ Classification_of_MajorImportedGoods.xlsx
+INFO:data_processing.excel_loader:Loaded table03: shape=(28, 24), columns=24
+INFO:__main__:   ✅ Loaded: (28, 24)
+INFO:__main__:🧹 Cleaning table03...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table03
+WARNING:data_processing.data_cleaner:No column mappings found for table03
+INFO:data_processing.data_cleaner:Cleaned table03: final shape=(11, 24)
+INFO:__main__:   ✅ Cleaned: (11, 24)
+INFO:__main__:🔄 Transforming table03...
+INFO:data_processing.data_transformer:Transforming dataframe for table03
+INFO:data_processing.data_transformer:Transformed table03: final shape=(11, 26)
+INFO:__main__:   ✅ Transformed: (11, 26)
+INFO:__main__:✓  Validating table03...
+INFO:data_processing.data_validator:Validating dataframe for table03
+INFO:data_processing.data_validator:Validation for table03: PASSED
+INFO:__main__:   ✅ Validation passed
+WARNING:__main__:      ⚠️  No year/month column found
+INFO:__main__:💾 Exporting table03...
+INFO:data_processing.format_converter:Exported table03 to Parquet: data/processed/parquet/table03.parquet (0.02 MB)
+INFO:data_processing.format_converter:Exported table03 to CSV: data/processed/csv/table03.csv (0.00 MB)
+INFO:data_processing.format_converter:Exported table03 to JSON: data/processed/json/table03.json (0.01 MB)
+INFO:data_processing.format_converter:Exported table03 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table03.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table03.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table03.json
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE04
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table04...
+INFO:data_processing.excel_loader:Loading table04 from Table4_MajorExportCommodities.xlsx
+INFO:data_processing.excel_loader:Loaded table04: shape=(29, 33), columns=33
+INFO:__main__:   ✅ Loaded: (29, 33)
+INFO:__main__:🧹 Cleaning table04...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table04
+WARNING:data_processing.data_cleaner:No column mappings found for table04
+INFO:data_processing.data_cleaner:Cleaned table04: final shape=(11, 33)
+INFO:__main__:   ✅ Cleaned: (11, 33)
+INFO:__main__:🔄 Transforming table04...
+INFO:data_processing.data_transformer:Transforming dataframe for table04
+INFO:data_processing.data_transformer:Transformed table04: final shape=(11, 35)
+INFO:__main__:   ✅ Transformed: (11, 35)
+INFO:__main__:✓  Validating table04...
+INFO:data_processing.data_validator:Validating dataframe for table04
+INFO:data_processing.data_validator:Validation for table04: PASSED
+INFO:__main__:   ✅ Validation passed
+WARNING:__main__:      ⚠️  No year/month column found
+INFO:__main__:💾 Exporting table04...
+INFO:data_processing.format_converter:Exported table04 to Parquet: data/processed/parquet/table04.parquet (0.02 MB)
+INFO:data_processing.format_converter:Exported table04 to CSV: data/processed/csv/table04.csv (0.01 MB)
+INFO:data_processing.format_converter:Exported table04 to JSON: data/processed/json/table04.json (0.01 MB)
+INFO:data_processing.format_converter:Exported table04 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table04.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table04.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table04.json
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE05
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table05...
+INFO:data_processing.excel_loader:Loading table05 from Table5_MajorImportedCommodities.xlsx
+INFO:data_processing.excel_loader:Loaded table05: shape=(29, 17), columns=17
+INFO:__main__:   ✅ Loaded: (29, 17)
+INFO:__main__:🧹 Cleaning table05...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table05
+WARNING:data_processing.data_cleaner:No column mappings found for table05
+INFO:data_processing.data_cleaner:Cleaned table05: final shape=(11, 17)
+INFO:__main__:   ✅ Cleaned: (11, 17)
+INFO:__main__:🔄 Transforming table05...
+INFO:data_processing.data_transformer:Transforming dataframe for table05
+INFO:data_processing.data_transformer:Transformed table05: final shape=(11, 19)
+INFO:__main__:   ✅ Transformed: (11, 19)
+INFO:__main__:✓  Validating table05...
+INFO:data_processing.data_validator:Validating dataframe for table05
+INFO:data_processing.data_validator:Validation for table05: PASSED
+INFO:__main__:   ✅ Validation passed
+WARNING:__main__:      ⚠️  No year/month column found
+INFO:__main__:💾 Exporting table05...
+INFO:data_processing.format_converter:Exported table05 to Parquet: data/processed/parquet/table05.parquet (0.01 MB)
+INFO:data_processing.format_converter:Exported table05 to CSV: data/processed/csv/table05.csv (0.00 MB)
+INFO:data_processing.format_converter:Exported table05 to JSON: data/processed/json/table05.json (0.01 MB)
+INFO:data_processing.format_converter:Exported table05 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table05.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table05.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table05.json
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE06
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table06...
+INFO:data_processing.excel_loader:Loading table06 from Table6_ExportTradeStructure.xlsx
+INFO:data_processing.excel_loader:Loaded table06: shape=(28, 12), columns=12
+INFO:__main__:   ✅ Loaded: (28, 12)
+INFO:__main__:🧹 Cleaning table06...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table06
+WARNING:data_processing.data_cleaner:No column mappings found for table06
+INFO:data_processing.data_cleaner:Cleaned table06: final shape=(11, 12)
+INFO:__main__:   ✅ Cleaned: (11, 12)
+INFO:__main__:🔄 Transforming table06...
+INFO:data_processing.data_transformer:Transforming dataframe for table06
+INFO:data_processing.data_transformer:Transformed table06: final shape=(11, 14)
+INFO:__main__:   ✅ Transformed: (11, 14)
+INFO:__main__:✓  Validating table06...
+INFO:data_processing.data_validator:Validating dataframe for table06
+INFO:data_processing.data_validator:Validation for table06: PASSED
+INFO:__main__:   ✅ Validation passed
+WARNING:__main__:      ⚠️  No year/month column found
+INFO:__main__:💾 Exporting table06...
+INFO:data_processing.format_converter:Exported table06 to Parquet: data/processed/parquet/table06.parquet (0.01 MB)
+INFO:data_processing.format_converter:Exported table06 to CSV: data/processed/csv/table06.csv (0.00 MB)
+INFO:data_processing.format_converter:Exported table06 to JSON: data/processed/json/table06.json (0.00 MB)
+INFO:data_processing.format_converter:Exported table06 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table06.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table06.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table06.json
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE07
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table07...
+INFO:data_processing.excel_loader:Loading table07 from Table7_ImportTradeStructure.xlsx
+INFO:data_processing.excel_loader:Loaded table07: shape=(28, 12), columns=12
+INFO:__main__:   ✅ Loaded: (28, 12)
+INFO:__main__:🧹 Cleaning table07...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table07
+WARNING:data_processing.data_cleaner:No column mappings found for table07
+INFO:data_processing.data_cleaner:Cleaned table07: final shape=(11, 12)
+INFO:__main__:   ✅ Cleaned: (11, 12)
+INFO:__main__:🔄 Transforming table07...
+INFO:data_processing.data_transformer:Transforming dataframe for table07
+INFO:data_processing.data_transformer:Transformed table07: final shape=(11, 14)
+INFO:__main__:   ✅ Transformed: (11, 14)
+INFO:__main__:✓  Validating table07...
+INFO:data_processing.data_validator:Validating dataframe for table07
+INFO:data_processing.data_validator:Validation for table07: PASSED
+INFO:__main__:   ✅ Validation passed
+WARNING:__main__:      ⚠️  No year/month column found
+INFO:__main__:💾 Exporting table07...
+INFO:data_processing.format_converter:Exported table07 to Parquet: data/processed/parquet/table07.parquet (0.01 MB)
+INFO:data_processing.format_converter:Exported table07 to CSV: data/processed/csv/table07.csv (0.00 MB)
+INFO:data_processing.format_converter:Exported table07 to JSON: data/processed/json/table07.json (0.00 MB)
+INFO:data_processing.format_converter:Exported table07 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table07.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table07.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table07.json
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE08
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table08...
+INFO:data_processing.excel_loader:Loading table08 from Table8_Taiwans's_ExportValue_and_AnnualGrowthRate.xlsx
+INFO:data_processing.excel_loader:Loaded table08: shape=(28, 18), columns=18
+INFO:__main__:   ✅ Loaded: (28, 18)
+INFO:__main__:🧹 Cleaning table08...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table08
+INFO:data_processing.data_cleaner:Cleaned table08: final shape=(11, 18)
+INFO:__main__:   ✅ Cleaned: (11, 18)
+INFO:__main__:🔄 Transforming table08...
+INFO:data_processing.data_transformer:Transforming dataframe for table08
+INFO:data_processing.data_transformer:Transformed table08: final shape=(11, 20)
+INFO:__main__:   ✅ Transformed: (11, 20)
+INFO:__main__:✓  Validating table08...
+INFO:data_processing.data_validator:Validating dataframe for table08
+INFO:data_processing.data_validator:Validation for table08: PASSED
+INFO:__main__:   ✅ Validation passed
+INFO:__main__:💾 Exporting table08...
+INFO:data_processing.format_converter:Exported table08 to Parquet: data/processed/parquet/table08.parquet (0.01 MB)
+INFO:data_processing.format_converter:Exported table08 to CSV: data/processed/csv/table08.csv (0.00 MB)
+INFO:data_processing.format_converter:Exported table08 to JSON: data/processed/json/table08.json (0.01 MB)
+INFO:data_processing.format_converter:Exported table08 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table08.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table08.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table08.json
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE09
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table09...
+INFO:data_processing.excel_loader:Loading table09 from Table9_ ImportValue_AnnualGrowthRate(to_Taiwan).xlsx
+INFO:data_processing.excel_loader:Loaded table09: shape=(28, 18), columns=18
+INFO:__main__:   ✅ Loaded: (28, 18)
+INFO:__main__:🧹 Cleaning table09...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table09
+WARNING:data_processing.data_cleaner:No column mappings found for table09
+INFO:data_processing.data_cleaner:Cleaned table09: final shape=(11, 18)
+INFO:__main__:   ✅ Cleaned: (11, 18)
+INFO:__main__:🔄 Transforming table09...
+INFO:data_processing.data_transformer:Transforming dataframe for table09
+INFO:data_processing.data_transformer:Transformed table09: final shape=(11, 20)
+INFO:__main__:   ✅ Transformed: (11, 20)
+INFO:__main__:✓  Validating table09...
+INFO:data_processing.data_validator:Validating dataframe for table09
+INFO:data_processing.data_validator:Validation for table09: PASSED
+INFO:__main__:   ✅ Validation passed
+WARNING:__main__:      ⚠️  No year/month column found
+INFO:__main__:💾 Exporting table09...
+INFO:data_processing.format_converter:Exported table09 to Parquet: data/processed/parquet/table09.parquet (0.01 MB)
+INFO:data_processing.format_converter:Exported table09 to CSV: data/processed/csv/table09.csv (0.00 MB)
+INFO:data_processing.format_converter:Exported table09 to JSON: data/processed/json/table09.json (0.01 MB)
+INFO:data_processing.format_converter:Exported table09 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table09.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table09.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table09.json
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE10
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table10...
+INFO:data_processing.excel_loader:Loading table10 from Table10_Surplus_inTrade_with_MajorCountries.xlsx
+INFO:data_processing.excel_loader:Loaded table10: shape=(29, 11), columns=11
+INFO:__main__:   ✅ Loaded: (29, 11)
+INFO:__main__:🧹 Cleaning table10...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table10
+WARNING:data_processing.data_cleaner:No column mappings found for table10
+INFO:data_processing.data_cleaner:Cleaned table10: final shape=(11, 11)
+INFO:__main__:   ✅ Cleaned: (11, 11)
+INFO:__main__:🔄 Transforming table10...
+INFO:data_processing.data_transformer:Transforming dataframe for table10
+INFO:data_processing.data_transformer:Transformed table10: final shape=(11, 13)
+INFO:__main__:   ✅ Transformed: (11, 13)
+INFO:__main__:✓  Validating table10...
+INFO:data_processing.data_validator:Validating dataframe for table10
+INFO:data_processing.data_validator:Validation for table10: PASSED
+INFO:__main__:   ✅ Validation passed
+WARNING:__main__:      ⚠️  No year/month column found
+INFO:__main__:💾 Exporting table10...
+INFO:data_processing.format_converter:Exported table10 to Parquet: data/processed/parquet/table10.parquet (0.01 MB)
+INFO:data_processing.format_converter:Exported table10 to CSV: data/processed/csv/table10.csv (0.00 MB)
+INFO:data_processing.format_converter:Exported table10 to JSON: data/processed/json/table10.json (0.00 MB)
+INFO:data_processing.format_converter:Exported table10 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table10.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table10.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table10.json
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE11
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table11...
+INFO:data_processing.excel_loader:Loading table11 from Table11_MajorExportCommodities(China_and_HongKong).xlsx
+INFO:data_processing.excel_loader:Loaded table11: shape=(28, 14), columns=14
+INFO:__main__:   ✅ Loaded: (28, 14)
+INFO:__main__:🧹 Cleaning table11...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table11
+INFO:data_processing.data_cleaner:Cleaned table11: final shape=(11, 14)
+INFO:__main__:   ✅ Cleaned: (11, 14)
+INFO:__main__:🔄 Transforming table11...
+INFO:data_processing.data_transformer:Transforming dataframe for table11
+INFO:data_processing.data_transformer:Transformed table11: final shape=(11, 16)
+INFO:__main__:   ✅ Transformed: (11, 16)
+INFO:__main__:✓  Validating table11...
+INFO:data_processing.data_validator:Validating dataframe for table11
+INFO:data_processing.data_validator:Validation for table11: PASSED
+INFO:__main__:   ✅ Validation passed
+INFO:__main__:💾 Exporting table11...
+INFO:data_processing.format_converter:Exported table11 to Parquet: data/processed/parquet/table11.parquet (0.01 MB)
+INFO:data_processing.format_converter:Exported table11 to CSV: data/processed/csv/table11.csv (0.00 MB)
+INFO:data_processing.format_converter:Exported table11 to JSON: data/processed/json/table11.json (0.01 MB)
+INFO:data_processing.format_converter:Exported table11 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table11.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table11.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table11.json
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE12
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table12...
+INFO:data_processing.excel_loader:Loading table12 from Table12_ExporValue_and_AnnualGrowthRate_to_18Countries_UnderNewSouthbound_Policy.xlsx
+INFO:data_processing.excel_loader:Loaded table12: shape=(29, 32), columns=32
+INFO:__main__:   ✅ Loaded: (29, 32)
+INFO:__main__:🧹 Cleaning table12...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table12
+WARNING:data_processing.data_cleaner:No column mappings found for table12
+INFO:data_processing.data_cleaner:Cleaned table12: final shape=(11, 32)
+INFO:__main__:   ✅ Cleaned: (11, 32)
+INFO:__main__:🔄 Transforming table12...
+INFO:data_processing.data_transformer:Transforming dataframe for table12
+INFO:data_processing.data_transformer:Transformed table12: final shape=(11, 34)
+INFO:__main__:   ✅ Transformed: (11, 34)
+INFO:__main__:✓  Validating table12...
+INFO:data_processing.data_validator:Validating dataframe for table12
+INFO:data_processing.data_validator:Validation for table12: PASSED
+INFO:__main__:   ✅ Validation passed
+WARNING:__main__:      ⚠️  No year/month column found
+INFO:__main__:💾 Exporting table12...
+INFO:data_processing.format_converter:Exported table12 to Parquet: data/processed/parquet/table12.parquet (0.02 MB)
+INFO:data_processing.format_converter:Exported table12 to CSV: data/processed/csv/table12.csv (0.00 MB)
+INFO:data_processing.format_converter:Exported table12 to JSON: data/processed/json/table12.json (0.01 MB)
+INFO:data_processing.format_converter:Exported table12 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table12.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table12.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table12.json
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE13
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table13...
+INFO:data_processing.excel_loader:Loading table13 from Table13_Seasonally_AdjustedImport_and_ExportTradeValues.xlsx
+INFO:data_processing.excel_loader:Loaded table13: shape=(29, 13), columns=13
+INFO:__main__:   ✅ Loaded: (29, 13)
+INFO:__main__:🧹 Cleaning table13...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table13
+WARNING:data_processing.data_cleaner:No column mappings found for table13
+INFO:data_processing.data_cleaner:Cleaned table13: final shape=(2, 13)
+INFO:__main__:   ✅ Cleaned: (2, 13)
+INFO:__main__:🔄 Transforming table13...
+INFO:data_processing.data_transformer:Transforming dataframe for table13
+INFO:data_processing.data_transformer:Transformed table13: final shape=(2, 15)
+INFO:__main__:   ✅ Transformed: (2, 15)
+INFO:__main__:✓  Validating table13...
+INFO:data_processing.data_validator:Validating dataframe for table13
+INFO:data_processing.data_validator:Validation for table13: PASSED
+INFO:__main__:   ✅ Validation passed
+WARNING:__main__:      ⚠️  No year/month column found
+INFO:__main__:💾 Exporting table13...
+INFO:data_processing.format_converter:Exported table13 to Parquet: data/processed/parquet/table13.parquet (0.01 MB)
+INFO:data_processing.format_converter:Exported table13 to CSV: data/processed/csv/table13.csv (0.00 MB)
+INFO:data_processing.format_converter:Exported table13 to JSON: data/processed/json/table13.json (0.00 MB)
+INFO:data_processing.format_converter:Exported table13 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table13.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table13.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table13.json
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE14
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table14...
+INFO:data_processing.excel_loader:Loading table14 from Table14_Import_and_ExportValues_and_AnnualGrowthRates_for_MajorCountries__OR_Regions.xlsx
+INFO:data_processing.excel_loader:Loaded table14: shape=(24, 33), columns=33
+INFO:__main__:   ✅ Loaded: (24, 33)
+INFO:__main__:🧹 Cleaning table14...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table14
+WARNING:data_processing.data_cleaner:No column mappings found for table14
+INFO:data_processing.data_cleaner:Cleaned table14: final shape=(10, 33)
+INFO:__main__:   ✅ Cleaned: (10, 33)
+INFO:__main__:🔄 Transforming table14...
+INFO:data_processing.data_transformer:Transforming dataframe for table14
+INFO:data_processing.data_transformer:Transformed table14: final shape=(10, 35)
+INFO:__main__:   ✅ Transformed: (10, 35)
+INFO:__main__:✓  Validating table14...
+INFO:data_processing.data_validator:Validating dataframe for table14
+INFO:data_processing.data_validator:Validation for table14: PASSED
+INFO:__main__:   ✅ Validation passed
+WARNING:__main__:      ⚠️  No year/month column found
+INFO:__main__:💾 Exporting table14...
+INFO:data_processing.format_converter:Exported table14 to Parquet: data/processed/parquet/table14.parquet (0.02 MB)
+INFO:data_processing.format_converter:Exported table14 to CSV: data/processed/csv/table14.csv (0.01 MB)
+INFO:data_processing.format_converter:Exported table14 to JSON: data/processed/json/table14.json (0.01 MB)
+INFO:data_processing.format_converter:Exported table14 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table14.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table14.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table14.json
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE15
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table15...
+INFO:data_processing.excel_loader:Loading table15 from Table15_Import_and_Export_Price-RelatedIndicators.xlsx
+INFO:data_processing.excel_loader:Loaded table15: shape=(24, 15), columns=15
+INFO:__main__:   ✅ Loaded: (24, 15)
+INFO:__main__:🧹 Cleaning table15...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table15
+WARNING:data_processing.data_cleaner:No column mappings found for table15
+INFO:data_processing.data_cleaner:Cleaned table15: final shape=(10, 15)
+INFO:__main__:   ✅ Cleaned: (10, 15)
+INFO:__main__:🔄 Transforming table15...
+INFO:data_processing.data_transformer:Transforming dataframe for table15
+INFO:data_processing.data_transformer:Transformed table15: final shape=(10, 17)
+INFO:__main__:   ✅ Transformed: (10, 17)
+INFO:__main__:✓  Validating table15...
+INFO:data_processing.data_validator:Validating dataframe for table15
+INFO:data_processing.data_validator:Validation for table15: PASSED
+INFO:__main__:   ✅ Validation passed
+WARNING:__main__:      ⚠️  No year/month column found
+INFO:__main__:💾 Exporting table15...
+INFO:data_processing.format_converter:Exported table15 to Parquet: data/processed/parquet/table15.parquet (0.01 MB)
+INFO:data_processing.format_converter:Exported table15 to CSV: data/processed/csv/table15.csv (0.00 MB)
+INFO:data_processing.format_converter:Exported table15 to JSON: data/processed/json/table15.json (0.01 MB)
+INFO:data_processing.format_converter:Exported table15 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table15.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table15.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table15.json
+INFO:__main__:================================================================================
+INFO:__main__:Processing TABLE16
+INFO:__main__:================================================================================
+INFO:__main__:📥 Loading table16...
+INFO:data_processing.excel_loader:Loading table16 from Table16_ExchangeRates_of_MajorCountries_CurrenciesAgainst_USDollar.xlsx
+INFO:data_processing.excel_loader:Loaded table16: shape=(25, 17), columns=17
+INFO:__main__:   ✅ Loaded: (25, 17)
+INFO:__main__:🧹 Cleaning table16...
+INFO:data_processing.data_cleaner:Cleaning dataframe for table16
+WARNING:data_processing.data_cleaner:No column mappings found for table16
+INFO:data_processing.data_cleaner:Cleaned table16: final shape=(11, 17)
+INFO:__main__:   ✅ Cleaned: (11, 17)
+INFO:__main__:🔄 Transforming table16...
+INFO:data_processing.data_transformer:Transforming dataframe for table16
+INFO:data_processing.data_transformer:Transformed table16: final shape=(11, 19)
+INFO:__main__:   ✅ Transformed: (11, 19)
+INFO:__main__:✓  Validating table16...
+INFO:data_processing.data_validator:Validating dataframe for table16
+INFO:data_processing.data_validator:Validation for table16: PASSED
+INFO:__main__:   ✅ Validation passed
+WARNING:__main__:      ⚠️  No year/month column found
+INFO:__main__:💾 Exporting table16...
+INFO:data_processing.format_converter:Exported table16 to Parquet: data/processed/parquet/table16.parquet (0.01 MB)
+INFO:data_processing.format_converter:Exported table16 to CSV: data/processed/csv/table16.csv (0.00 MB)
+INFO:data_processing.format_converter:Exported table16 to JSON: data/processed/json/table16.json (0.01 MB)
+INFO:data_processing.format_converter:Exported table16 to 3 formats
+INFO:__main__:   ✅ PARQUET: data/processed/parquet/table16.parquet
+INFO:__main__:   ✅ CSV: data/processed/csv/table16.csv
+INFO:__main__:   ✅ JSON: data/processed/json/table16.json
+INFO:__main__:Pipeline execution completed
+
+================================================================================
+PIPELINE EXECUTION SUMMARY
+================================================================================
+Total Tables Processed: 16
+Successful: 16
+Failed: 0
+Success Rate: 100.0%
+
+VALIDATION RESULTS:
+  table01: ✅ PASSED (1 warnings)
+  table02: ✅ PASSED
+  table03: ✅ PASSED (1 warnings)
+  table04: ✅ PASSED (1 warnings)
+  table05: ✅ PASSED (1 warnings)
+  table06: ✅ PASSED (1 warnings)
+  table07: ✅ PASSED (1 warnings)
+  table08: ✅ PASSED
+  table09: ✅ PASSED (1 warnings)
+  table10: ✅ PASSED (1 warnings)
+  table11: ✅ PASSED
+  table12: ✅ PASSED (1 warnings)
+  table13: ✅ PASSED (1 warnings)
+  table14: ✅ PASSED (1 warnings)
+  table15: ✅ PASSED (1 warnings)
+  table16: ✅ PASSED (1 warnings)
+
+================================================================================
+

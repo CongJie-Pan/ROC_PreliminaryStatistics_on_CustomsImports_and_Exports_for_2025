@@ -1,0 +1,31 @@
+{
+  "table08": {
+    "年(月)別": "year_month",
+    "合　計": "total_export_value_usd_million",
+    "中國大陸與香港": "china_hk_export_value_usd_million",
+    "美　國": "us_export_value_usd_million",
+    "東　協": "asean_export_value_usd_million",
+    "日　本": "japan_export_value_usd_million",
+    "南　韓": "south_korea_export_value_usd_million",
+    "歐　洲": "europe_export_value_usd_million"
+  },
+  "table02": {
+    "年(月)別": "year_month",
+    "資通與視聽產品": "ict_products_export_value_usd_million",
+    "電子零組件": "electronic_components_export_value_usd_million"
+  },
+  "table11": {
+    "年(月)別": "year_month",
+    "合　計": "total_export_value_usd_million",
+    "資通與視聽產品": "ict_products_export_value_usd_million",
+    "電子零組件": "electronic_components_export_value_usd_million"
+  },
+  "column_patterns": {
+    "年增率": "_growth_rate_pct",
+    "占總出口": "_share_pct",
+    "占比": "_share_pct",
+    "金額": "_value_usd_million",
+    "出口": "export_",
+    "進口": "import_"
+  }
+}
