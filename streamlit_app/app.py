@@ -43,18 +43,18 @@ def render_sidebar():
         st.divider()
 
         # Data source information
-        st.markdown("### 📂 Data Source")
+        st.markdown("### 📂 資料來源")
         st.info(f"""
-        **Source:** {SETTINGS['data_source']}
-        **Period:** {SETTINGS['data_month']}
-        **Version:** {SETTINGS['version']}
+        **來源：** {SETTINGS['data_source']}
+        **期間：** {SETTINGS['data_month']}
+        **版本：** {SETTINGS['version']}
         """)
 
         st.divider()
 
         # DIKW Layer Selection
-        st.markdown("### 🎯 Analysis Layer")
-        st.caption("Select the depth of analysis to display")
+        st.markdown("### 🎯 分析層級")
+        st.caption("選擇要顯示的分析深度")
 
         # Initialize session state for DIKW layer
         if 'dikw_layer' not in st.session_state:
@@ -67,10 +67,10 @@ def render_sidebar():
         selected_index = layer_options.index(st.session_state.dikw_layer)
 
         selected_layer_label = st.radio(
-            "Choose analysis layer:",
+            "選擇分析層級：",
             layer_labels,
             index=selected_index,
-            help="Switch between different levels of analysis depth"
+            help="在不同分析深度層級之間切換"
         )
 
         # Update session state
@@ -86,14 +86,22 @@ def render_sidebar():
         </div>
         """, unsafe_allow_html=True)
 
+        # Show data tables list if Data layer is selected
+        if selected_layer == 'data' and 'tables' in layer_info:
+            with st.expander("📋 查看所有資料表", expanded=False):
+                st.caption("本儀表板使用以下 16 張資料表：")
+                for table in layer_info['tables']:
+                    st.markdown(f"- **{table['id'].upper()}**: {table['name']}")
+                st.caption("\n💡 各頁面會顯示其使用的特定資料表")
+
         st.divider()
 
         # Navigation hint
-        st.markdown("### 🧭 Navigation")
-        st.caption("Use the sidebar to navigate between pages")
+        st.markdown("### 🧭 導覽")
+        st.caption("使用側邊欄在不同頁面間切換")
 
         # Page overview
-        with st.expander("📚 Page Overview"):
+        with st.expander("📚 頁面總覽"):
             for page in SETTINGS["pages"]:
                 st.markdown(f"""
                 **{page['icon']} {page['name']}**
@@ -103,8 +111,8 @@ def render_sidebar():
         st.divider()
 
         # Footer
-        st.caption(f"Made with ❤️ by {SETTINGS['author']}")
-        st.caption(f"Powered by Streamlit")
+        st.caption(f"由 {SETTINGS['author']} 製作 ❤️")
+        st.caption(f"技術支援：Streamlit")
 
 def render_welcome_page():
     """
@@ -119,48 +127,48 @@ def render_welcome_page():
     """, unsafe_allow_html=True)
 
     # Overview section
-    st.markdown("## 📖 Overview")
+    st.markdown("## 📖 總覽")
 
     col1, col2 = st.columns(2)
 
     with col1:
         st.markdown("""
-        ### 🎯 Project Objectives
+        ### 🎯 專案目標
 
-        This dashboard provides comprehensive analysis of Taiwan's international trade patterns,
-        focusing on two key themes:
+        本儀表板提供台灣國際貿易模式的全面分析，
+        聚焦於兩大關鍵主題：
 
-        1. **ICT Export Surge to US** (+110% growth)
-           - AI infrastructure boom driving server demand
-           - GPU and networking equipment exports
-           - Record-breaking trade volumes
+        1. **對美 ICT 出口激增** (+110% 成長)
+           - AI 基礎設施熱潮驅動伺服器需求
+           - GPU 與網路設備出口
+           - 創紀錄的貿易量
 
-        2. **Trade Diversion Pattern**
-           - US becomes #1 export market (29.4% share)
-           - China/HK declines to #2 position
-           - Supply chain reorganization (friend-shoring)
+        2. **貿易轉移模式**
+           - 美國成為第一大出口市場（29.4% 市占率）
+           - 中國/香港降至第二位
+           - 供應鏈重組（友岸外包）
         """)
 
     with col2:
         st.markdown("""
-        ### 📊 Data & Methodology
+        ### 📊 資料與方法
 
-        **Data Source:**
-        - ROC Ministry of Finance
-        - 16 comprehensive trade tables
-        - Monthly data through August 2025
+        **資料來源：**
+        - 中華民國財政部關務署
+        - 16 張完整貿易統計表
+        - 2025 年 8 月止的月度資料
 
-        **Analysis Framework:**
-        - DIKW (Data-Information-Knowledge-Wisdom)
-        - Multi-dimensional trend analysis
-        - Causal factor identification
-        - Strategic recommendations
+        **分析架構：**
+        - DIKW（資料-資訊-知識-智慧）
+        - 多維度趨勢分析
+        - 因果關係識別
+        - 策略建議
         """)
 
     st.divider()
 
     # Key findings
-    st.markdown("## 🔑 Key Findings")
+    st.markdown("## 🔑 關鍵發現")
 
     col1, col2, col3, col4 = st.columns(4)
 
@@ -168,7 +176,7 @@ def render_welcome_page():
         st.markdown("""
         <div class="metric-card">
             <h3 style="color: #FF4B4B; margin: 0;">+110%</h3>
-            <p style="margin: 0.5rem 0 0 0; color: #6C757D;">ICT Export Growth to US</p>
+            <p style="margin: 0.5rem 0 0 0; color: #6C757D;">對美 ICT 出口成長</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -176,7 +184,7 @@ def render_welcome_page():
         st.markdown("""
         <div class="metric-card">
             <h3 style="color: #0068C9; margin: 0;">29.4%</h3>
-            <p style="margin: 0.5rem 0 0 0; color: #6C757D;">US Market Share</p>
+            <p style="margin: 0.5rem 0 0 0; color: #6C757D;">美國市場份額</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -184,7 +192,7 @@ def render_welcome_page():
         st.markdown("""
         <div class="metric-card">
             <h3 style="color: #09AB3B; margin: 0;">$853.6B</h3>
-            <p style="margin: 0.5rem 0 0 0; color: #6C757D;">Trade Surplus</p>
+            <p style="margin: 0.5rem 0 0 0; color: #6C757D;">貿易順差</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -192,84 +200,84 @@ def render_welcome_page():
         st.markdown("""
         <div class="metric-card">
             <h3 style="color: #FFA421; margin: 0;">-26.7%</h3>
-            <p style="margin: 0.5rem 0 0 0; color: #6C757D;">China/HK ICT Decline</p>
+            <p style="margin: 0.5rem 0 0 0; color: #6C757D;">中國/香港 ICT 下降</p>
         </div>
         """, unsafe_allow_html=True)
 
     st.divider()
 
     # Navigation guidance
-    st.markdown("## 🧭 How to Use This Dashboard")
+    st.markdown("## 🧭 如何使用此儀表板")
 
-    tab1, tab2, tab3 = st.tabs(["📄 Pages", "🎯 DIKW Layers", "🛠️ Features"])
+    tab1, tab2, tab3 = st.tabs(["📄 頁面", "🎯 DIKW 層級", "🛠️ 功能"])
 
     with tab1:
         st.markdown("""
-        ### Dashboard Pages
+        ### 儀表板頁面
 
-        Navigate through the analysis using the sidebar:
+        使用側邊欄瀏覽分析：
 
-        1. **📊 Executive Summary** - High-level overview with key metrics
-        2. **🇺🇸 US Trade Surge** - Deep dive into ICT export growth (Theme 1)
-        3. **🔄 Trade Diversion** - Market shift analysis (Theme 2)
-        4. **📈 DIKW Analysis** - Methodology and framework explanation
-        5. **💡 Insights & Wisdom** - Strategic recommendations and scenario analysis
+        1. **📊 執行摘要** - 關鍵指標的高層次總覽
+        2. **🇺🇸 美國貿易激增** - ICT 出口成長深入分析（主題一）
+        3. **🔄 貿易轉移模式** - 市場轉移分析（主題二）
+        4. **📈 DIKW 分析架構** - 方法論與架構說明
+        5. **💡 洞察與智慧** - 策略建議與情境分析
         """)
 
     with tab2:
         st.markdown("""
-        ### DIKW Framework
+        ### DIKW 架構
 
-        Switch between analysis layers using the sidebar selector:
+        使用側邊欄選擇器切換分析層級：
 
-        - **📊 Data** - Raw statistics and measurements
-        - **📈 Information** - Processed trends and patterns
-        - **🧠 Knowledge** - Causal relationships and understanding
-        - **💡 Wisdom** - Actionable insights and recommendations
+        - **📊 資料層** - 原始統計數據與測量值
+        - **📈 資訊層** - 經處理的趨勢與模式
+        - **🧠 知識層** - 因果關係與理解
+        - **💡 智慧層** - 可行動的洞察與建議
 
-        *Different content will be displayed based on your selection.*
+        *根據您的選擇，會顯示不同的內容。*
         """)
 
     with tab3:
         st.markdown("""
-        ### Dashboard Features
+        ### 儀表板功能
 
-        - **Interactive Charts** - Hover, zoom, and download visualizations
-        - **Dynamic Filters** - Customize data views by time period and category
-        - **Comparison Mode** - Side-by-side market analysis
-        - **Data Export** - Download filtered data in multiple formats
-        - **Responsive Design** - Works on desktop, tablet, and mobile devices
+        - **互動式圖表** - 懸停、縮放與下載視覺化圖表
+        - **動態篩選** - 依時間與類別自訂資料檢視
+        - **比較模式** - 並排市場分析
+        - **資料匯出** - 以多種格式下載篩選後的資料
+        - **響應式設計** - 適用於桌機、平板與行動裝置
         """)
 
     st.divider()
 
     # Getting started
-    st.markdown("## 🚀 Getting Started")
+    st.markdown("## 🚀 開始使用")
 
     st.success("""
-    **👉 Ready to explore?**
+    **👉 準備好探索了嗎？**
 
-    Use the sidebar navigation to select a page and begin your analysis journey.
-    We recommend starting with the **Executive Summary** for a comprehensive overview.
+    使用側邊欄導覽選擇頁面，開始您的分析之旅。
+    我們建議從**執行摘要**開始，以獲得全面的概觀。
     """)
 
     # Technical details (collapsible)
-    with st.expander("🔧 Technical Details"):
+    with st.expander("🔧 技術細節"):
         st.markdown("""
-        **Technology Stack:**
-        - Frontend: Streamlit (Multi-Page App)
-        - Data Processing: pandas, NumPy
-        - Visualization: Plotly
-        - Data Format: Apache Parquet (10x faster loading)
+        **技術堆疊：**
+        - 前端：Streamlit（多頁應用程式）
+        - 資料處理：pandas、NumPy
+        - 視覺化：Plotly
+        - 資料格式：Apache Parquet（載入速度快 10 倍）
 
-        **Performance:**
-        - Page load time: <2 seconds
-        - Data caching: Enabled (1-hour TTL)
-        - Chart rendering: <1 second
+        **效能：**
+        - 頁面載入時間：< 2 秒
+        - 資料快取：已啟用（1 小時 TTL）
+        - 圖表渲染：< 1 秒
 
-        **Data Pipeline:**
-        - Excel → Load → Clean → Transform → Validate → Export (Parquet/CSV/JSON)
-        - 16 tables processed with 100% validation pass rate
+        **資料管線：**
+        - Excel → 載入 → 清理 → 轉換 → 驗證 → 匯出（Parquet/CSV/JSON）
+        - 16 張表格已處理，100% 驗證通過率
         """)
 
 def main():

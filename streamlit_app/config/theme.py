@@ -66,36 +66,72 @@ CHART_TEMPLATE: Dict[str, Any] = {
     "layout": {
         "font": {
             "family": "Arial, sans-serif",
-            "size": 12,
-            "color": COLORS["text"]
+            "size": 14,
+            "color": "#0e1117"  # Pure black for maximum contrast
         },
         "plot_bgcolor": COLORS["background"],
         "paper_bgcolor": COLORS["background"],
-        "margin": {"l": 60, "r": 40, "t": 60, "b": 60},
+        # Add extra top/bottom margin to avoid legend/axis overlap
+        "margin": {"l": 60, "r": 40, "t": 90, "b": 110},
         "hovermode": "closest",
         "hoverlabel": {
             "bgcolor": "white",
-            "font_size": 12,
-            "font_family": "Arial"
+            "font": {
+                "size": 14,
+                "color": "#0e1117",
+                "family": "Arial"
+            },
+            "bordercolor": "#0e1117"
         },
         "legend": {
             "orientation": "h",
+            # Place legend above the plot to prevent overlap with
+            # x-axis tick labels and title, which sit at the bottom.
             "yanchor": "bottom",
-            "y": -0.2,
+            "y": 1.02,
             "xanchor": "center",
-            "x": 0.5
+            "x": 0.5,
+            "font": {
+                "size": 12,
+                "color": "#0e1117"
+            },
+            "itemsizing": "constant",
+            "tracegroupgap": 40,
+            "itemwidth": 50
         },
         "xaxis": {
             "showgrid": True,
             "gridcolor": "#E5E5E5",
             "gridwidth": 1,
-            "zeroline": False
+            "zeroline": False,
+            "title": {
+                "font": {
+                    "size": 14,
+                    "color": "#0e1117",
+                    "family": "Arial"
+                }
+            },
+            "tickfont": {
+                "size": 13,
+                "color": "#0e1117"
+            }
         },
         "yaxis": {
             "showgrid": True,
             "gridcolor": "#E5E5E5",
             "gridwidth": 1,
-            "zeroline": False
+            "zeroline": False,
+            "title": {
+                "font": {
+                    "size": 14,
+                    "color": "#0e1117",
+                    "family": "Arial"
+                }
+            },
+            "tickfont": {
+                "size": 13,
+                "color": "#0e1117"
+            }
         }
     }
 }
@@ -192,6 +228,166 @@ CUSTOM_CSS = """
         padding: 1rem;
         margin: 1rem 0;
         border-radius: 4px;
+    }
+
+    /* Streamlit tables and dataframes - ensure text is visible with high contrast */
+
+    /* General table styles */
+    table {
+        background-color: #ffffff !important;
+    }
+
+    table thead th {
+        color: #0e1117 !important;
+        background-color: #f0f2f6 !important;
+        font-weight: 600 !important;
+        border-bottom: 2px solid #e6e6e6 !important;
+    }
+
+    table tbody td {
+        color: #0e1117 !important;
+        background-color: #ffffff !important;
+    }
+
+    table tbody tr {
+        background-color: #ffffff !important;
+    }
+
+    table tbody tr:hover {
+        background-color: #f9f9f9 !important;
+    }
+
+    /* Streamlit DataFrame component */
+    .stDataFrame {
+        color: #0e1117 !important;
+    }
+
+    .stDataFrame table {
+        background-color: #ffffff !important;
+    }
+
+    .stDataFrame thead th {
+        color: #0e1117 !important;
+        background-color: #f0f2f6 !important;
+        font-weight: 600 !important;
+    }
+
+    .stDataFrame tbody td {
+        color: #0e1117 !important;
+        background-color: #ffffff !important;
+    }
+
+    .stDataFrame tbody tr {
+        background-color: #ffffff !important;
+    }
+
+    /* Streamlit Table component */
+    .stTable {
+        color: #0e1117 !important;
+    }
+
+    .stTable table {
+        background-color: #ffffff !important;
+    }
+
+    .stTable thead th {
+        color: #0e1117 !important;
+        background-color: #f0f2f6 !important;
+        font-weight: 600 !important;
+    }
+
+    .stTable tbody td {
+        color: #0e1117 !important;
+        background-color: #ffffff !important;
+    }
+
+    .stTable tbody tr {
+        background-color: #ffffff !important;
+    }
+
+    /* Pandas DataFrame styling */
+    .dataframe {
+        color: #0e1117 !important;
+        background-color: #ffffff !important;
+    }
+
+    .dataframe thead th {
+        color: #0e1117 !important;
+        background-color: #f0f2f6 !important;
+        font-weight: 600 !important;
+    }
+
+    .dataframe tbody td {
+        color: #0e1117 !important;
+        background-color: #ffffff !important;
+    }
+
+    .dataframe tbody tr {
+        background-color: #ffffff !important;
+    }
+
+    /* Markdown tables */
+    .stMarkdown table {
+        color: #0e1117 !important;
+        background-color: #ffffff !important;
+        border-collapse: collapse !important;
+    }
+
+    .stMarkdown table thead th {
+        color: #0e1117 !important;
+        background-color: #f0f2f6 !important;
+        font-weight: 600 !important;
+        padding: 0.5rem !important;
+        border: 1px solid #e6e6e6 !important;
+    }
+
+    .stMarkdown table tbody td {
+        color: #0e1117 !important;
+        background-color: #ffffff !important;
+        padding: 0.5rem !important;
+        border: 1px solid #e6e6e6 !important;
+    }
+
+    .stMarkdown table tbody tr {
+        background-color: #ffffff !important;
+    }
+
+    /* Tables inside alert/info boxes */
+    .stAlert table, .stInfo table, .stSuccess table, .stWarning table, .stError table {
+        color: #0e1117 !important;
+        background-color: #ffffff !important;
+    }
+
+    .stAlert table td, .stInfo table td, .stSuccess table td, .stWarning table td, .stError table td {
+        color: #0e1117 !important;
+        background-color: #ffffff !important;
+    }
+
+    /* Element container tables */
+    .element-container table {
+        background-color: #ffffff !important;
+    }
+
+    .element-container table td, .element-container table th {
+        color: #0e1117 !important;
+    }
+
+    /* Data editor tables */
+    [data-testid="stDataFrame"] {
+        color: #0e1117 !important;
+    }
+
+    [data-testid="stTable"] {
+        color: #0e1117 !important;
+    }
+
+    [data-testid="stDataFrame"] table, [data-testid="stTable"] table {
+        background-color: #ffffff !important;
+    }
+
+    [data-testid="stDataFrame"] td, [data-testid="stTable"] td,
+    [data-testid="stDataFrame"] th, [data-testid="stTable"] th {
+        color: #0e1117 !important;
     }
 
     /* Hide Streamlit branding */

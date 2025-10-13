@@ -24,14 +24,14 @@ JSON_DIR = PROCESSED_DATA_DIR / "json"
 # Application settings
 SETTINGS: Dict[str, Any] = {
     # Application metadata
-    "app_title": "Taiwan Export Analysis Dashboard",
-    "app_subtitle": "ICT Export Surge & Trade Diversion Pattern Analysis",
+    "app_title": "台灣出口分析儀表板",
+    "app_subtitle": "ICT 出口激增與貿易轉移模式分析",
     "version": "2.0.0",
     "author": "潘驄杰",
 
     # Data settings
-    "data_source": "ROC Ministry of Finance",
-    "data_month": "August 2025",
+    "data_source": "中華民國財政部關務署",
+    "data_month": "2025年8月",
     "data_format": "parquet",  # Default format: parquet, csv, or json
 
     # Display settings
@@ -41,7 +41,7 @@ SETTINGS: Dict[str, Any] = {
     "menu_items": {
         "Get Help": "https://github.com/yourusername/taiwan-export-analysis",
         "Report a bug": "https://github.com/yourusername/taiwan-export-analysis/issues",
-        "About": "Taiwan's ICT Export Surge and Trade Diversion Pattern Analysis Dashboard"
+        "About": "台灣 ICT 出口激增與貿易轉移模式分析儀表板"
     },
 
     # Performance settings
@@ -57,34 +57,34 @@ SETTINGS: Dict[str, Any] = {
     # Page configurations
     "pages": [
         {
-            "name": "Executive Summary",
+            "name": "執行摘要",
             "icon": "📊",
             "path": "1_📊_Executive_Summary.py",
-            "description": "Overview of key metrics and trends"
+            "description": "關鍵指標與趨勢總覽"
         },
         {
-            "name": "US Trade Surge",
+            "name": "美國貿易激增",
             "icon": "🇺🇸",
             "path": "2_🇺🇸_US_Trade_Surge.py",
-            "description": "Theme 1: ICT product export surge to US"
+            "description": "主題一：ICT 產品對美出口激增分析"
         },
         {
-            "name": "Trade Diversion",
+            "name": "貿易轉移模式",
             "icon": "🔄",
             "path": "3_🔄_Trade_Diversion.py",
-            "description": "Theme 2: Trade diversion pattern analysis"
+            "description": "主題二：貿易轉移模式分析"
         },
         {
-            "name": "DIKW Analysis",
+            "name": "DIKW 分析架構",
             "icon": "📈",
             "path": "4_📈_DIKW_Analysis.py",
-            "description": "Data-Information-Knowledge-Wisdom framework"
+            "description": "資料-資訊-知識-智慧分析架構"
         },
         {
-            "name": "Insights & Wisdom",
+            "name": "洞察與智慧",
             "icon": "💡",
             "path": "5_💡_Insights_Wisdom.py",
-            "description": "Actionable insights and recommendations"
+            "description": "可行動洞察與策略建議"
         }
     ]
 }
@@ -112,28 +112,46 @@ TABLE_MAPPING: Dict[str, str] = {
 # DIKW layers configuration
 DIKW_LAYERS = {
     "data": {
-        "name": "Data",
+        "name": "資料層",
         "icon": "📊",
         "color": "#1f77b4",
-        "description": "Raw statistics and measurements"
+        "description": "原始統計數據與測量值",
+        "tables": [
+            {"id": "table01", "name": "進出口貿易值及年增率"},
+            {"id": "table02", "name": "主要出口商品分類"},
+            {"id": "table03", "name": "主要進口商品分類"},
+            {"id": "table04", "name": "出口主要貨品詳細資料"},
+            {"id": "table05", "name": "進口主要貨品詳細資料"},
+            {"id": "table06", "name": "出口貿易結構"},
+            {"id": "table07", "name": "進口貿易結構"},
+            {"id": "table08", "name": "對主要國家（地區）出口值及年增率"},
+            {"id": "table09", "name": "自主要國家（地區）進口值及年增率"},
+            {"id": "table10", "name": "對主要國家（地區）貿易順差"},
+            {"id": "table11", "name": "對中國大陸及香港出口主要貨品"},
+            {"id": "table12", "name": "對新南向政策18國出口值及年增率"},
+            {"id": "table13", "name": "季節調整後進出口貿易值"},
+            {"id": "table14", "name": "主要國家（地區）進出口值及年增率"},
+            {"id": "table15", "name": "進出口價格相關指標"},
+            {"id": "table16", "name": "主要國家貨幣對美元匯率"}
+        ]
     },
     "information": {
-        "name": "Information",
+        "name": "資訊層",
         "icon": "📈",
         "color": "#ff7f0e",
-        "description": "Processed trends and patterns"
+        "description": "經處理的趨勢與模式"
     },
     "knowledge": {
-        "name": "Knowledge",
+        "name": "知識層",
         "icon": "🧠",
         "color": "#2ca02c",
-        "description": "Understanding of causal relationships"
+        "description": "對因果關係的理解"
     },
     "wisdom": {
-        "name": "Wisdom",
+        "name": "智慧層",
         "icon": "💡",
         "color": "#d62728",
-        "description": "Actionable insights and recommendations"
+        "description": "可行動的洞察與建議"
     }
 }
 

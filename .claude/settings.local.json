@@ -5,7 +5,15 @@
       "Bash(python:*)",
       "Bash(tree:*)",
       "Bash(uvx:*)",
-      "Bash(chmod:*)"
+      "Bash(chmod:*)",
+      "Bash(python3:*)",
+      "Bash(for file in streamlit_app/components/*.py streamlit_app/utils/*.py streamlit_app/pages/*.py)",
+      "Bash(do python3 -m py_compile \"$file\")",
+      "Bash(done)",
+      "Bash(pip install:*)",
+      "Read(//mnt/d/AboutCoding/CourseCode/Artificial_Intelligence_Practice_CourseCode/**)",
+      "Bash(find:*)",
+      "Bash(pip3 install:*)"
     ],
     "deny": [],
     "ask": []
